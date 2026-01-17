@@ -115,7 +115,7 @@
             // ProgressLabel
             // 
             ProgressLabel.AutoSize = true;
-            ProgressLabel.Location = new Point(279, 113);
+            ProgressLabel.Location = new Point(276, 132);
             ProgressLabel.Name = "ProgressLabel";
             ProgressLabel.Size = new Size(55, 15);
             ProgressLabel.TabIndex = 8;
