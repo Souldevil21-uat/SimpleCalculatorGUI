@@ -28,167 +28,146 @@
         /// </summary>
         private void InitializeComponent()
         {
-            InputKey1 = new TextBox();
-            InputKey2 = new TextBox();
-            buttonadd = new Button();
+            txtInput1 = new TextBox();
+            txtInput2 = new TextBox();
+            btnAdd = new Button();
             buttonequals = new Button();
-            AnswerBar = new ProgressBar();
-            Answer = new NumericUpDown();
-            label1 = new Label();
-            label2 = new Label();
-            ProgressLabel = new Label();
-            buttonsub = new Button();
-            buttonmul = new Button();
-            buttondiv = new Button();
-            ((System.ComponentModel.ISupportInitialize)Answer).BeginInit();
+            nudResult = new NumericUpDown();
+            lblStatus = new Label();
+            lblOpCount = new Label();
+            btnSub = new Button();
+            btnMul = new Button();
+            btnDiv = new Button();
+            ((System.ComponentModel.ISupportInitialize)nudResult).BeginInit();
             SuspendLayout();
             // 
-            // InputKey1
+            // txtInput1
             // 
-            InputKey1.Location = new Point(12, 25);
-            InputKey1.Name = "InputKey1";
-            InputKey1.Size = new Size(100, 23);
-            InputKey1.TabIndex = 0;
-            InputKey1.Text = "6";
+            txtInput1.Location = new Point(16, 182);
+            txtInput1.Name = "txtInput1";
+            txtInput1.Size = new Size(100, 23);
+            txtInput1.TabIndex = 0;
+            txtInput1.Text = "6";
             // 
-            // InputKey2
+            // txtInput2
             // 
-            InputKey2.Location = new Point(450, 26);
-            InputKey2.Name = "InputKey2";
-            InputKey2.Size = new Size(100, 23);
-            InputKey2.TabIndex = 1;
-            InputKey2.Text = "7";
+            txtInput2.Location = new Point(454, 182);
+            txtInput2.Name = "txtInput2";
+            txtInput2.Size = new Size(100, 23);
+            txtInput2.TabIndex = 1;
+            txtInput2.Text = "7";
             // 
-            // buttonadd
+            // btnAdd
             // 
-            buttonadd.Location = new Point(118, 26);
-            buttonadd.Name = "buttonadd";
-            buttonadd.Size = new Size(75, 23);
-            buttonadd.TabIndex = 2;
-            buttonadd.Text = "+";
-            buttonadd.UseVisualStyleBackColor = true;
+            btnAdd.Location = new Point(122, 182);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(75, 23);
+            btnAdd.TabIndex = 2;
+            btnAdd.Text = "+";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // buttonequals
             // 
-            buttonequals.Location = new Point(556, 26);
+            buttonequals.Location = new Point(560, 182);
             buttonequals.Name = "buttonequals";
             buttonequals.Size = new Size(75, 23);
             buttonequals.TabIndex = 3;
             buttonequals.Text = "=";
             buttonequals.UseVisualStyleBackColor = true;
-            buttonequals.Click += this.button2_Click;
             // 
-            // AnswerBar
+            // nudResult
             // 
-            AnswerBar.Location = new Point(276, 150);
-            AnswerBar.Name = "AnswerBar";
-            AnswerBar.Size = new Size(100, 23);
-            AnswerBar.TabIndex = 4;
-            AnswerBar.Value = 50;
+            nudResult.Location = new Point(657, 182);
+            nudResult.Name = "nudResult";
+            nudResult.Size = new Size(120, 23);
+            nudResult.TabIndex = 5;
+            nudResult.Value = new decimal(new int[] { 12, 0, 0, 0 });
             // 
-            // Answer
+            // lblStatus
             // 
-            Answer.Location = new Point(653, 26);
-            Answer.Name = "Answer";
-            Answer.Size = new Size(120, 23);
-            Answer.TabIndex = 5;
-            Answer.Value = new decimal(new int[] { 12, 0, 0, 0 });
+            lblStatus.AutoSize = true;
+            lblStatus.Location = new Point(16, 148);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(47, 15);
+            lblStatus.TabIndex = 6;
+            lblStatus.Text = "Input 1:";
             // 
-            // label1
+            // lblOpCount
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 7);
-            label1.Name = "label1";
-            label1.Size = new Size(47, 15);
-            label1.TabIndex = 6;
-            label1.Text = "Input 1:";
+            lblOpCount.AutoSize = true;
+            lblOpCount.Location = new Point(657, 148);
+            lblOpCount.Name = "lblOpCount";
+            lblOpCount.Size = new Size(55, 15);
+            lblOpCount.TabIndex = 8;
+            lblOpCount.Text = "Progress:";
             // 
-            // label2
+            // btnSub
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(450, 8);
-            label2.Name = "label2";
-            label2.Size = new Size(47, 15);
-            label2.TabIndex = 7;
-            label2.Text = "Input 2:";
+            btnSub.Location = new Point(203, 182);
+            btnSub.Name = "btnSub";
+            btnSub.Size = new Size(75, 23);
+            btnSub.TabIndex = 9;
+            btnSub.Text = "-";
+            btnSub.UseVisualStyleBackColor = true;
+            btnSub.Click += btnSub_Click;
             // 
-            // ProgressLabel
+            // btnMul
             // 
-            ProgressLabel.AutoSize = true;
-            ProgressLabel.Location = new Point(276, 132);
-            ProgressLabel.Name = "ProgressLabel";
-            ProgressLabel.Size = new Size(55, 15);
-            ProgressLabel.TabIndex = 8;
-            ProgressLabel.Text = "Progress:";
+            btnMul.Location = new Point(284, 182);
+            btnMul.Name = "btnMul";
+            btnMul.Size = new Size(75, 23);
+            btnMul.TabIndex = 10;
+            btnMul.Text = "x";
+            btnMul.UseVisualStyleBackColor = true;
+            btnMul.Click += btnMul_Click;
             // 
-            // buttonsub
+            // btnDiv
             // 
-            buttonsub.Location = new Point(199, 26);
-            buttonsub.Name = "buttonsub";
-            buttonsub.Size = new Size(75, 23);
-            buttonsub.TabIndex = 9;
-            buttonsub.Text = "-";
-            buttonsub.UseVisualStyleBackColor = true;
-            // 
-            // buttonmul
-            // 
-            buttonmul.Location = new Point(280, 26);
-            buttonmul.Name = "buttonmul";
-            buttonmul.Size = new Size(75, 23);
-            buttonmul.TabIndex = 10;
-            buttonmul.Text = "x";
-            buttonmul.UseVisualStyleBackColor = true;
-            // 
-            // buttondiv
-            // 
-            buttondiv.Location = new Point(361, 25);
-            buttondiv.Name = "buttondiv";
-            buttondiv.Size = new Size(75, 23);
-            buttondiv.TabIndex = 11;
-            buttondiv.Text = "÷";
-            buttondiv.UseVisualStyleBackColor = true;
+            btnDiv.Location = new Point(365, 182);
+            btnDiv.Name = "btnDiv";
+            btnDiv.Size = new Size(75, 23);
+            btnDiv.TabIndex = 11;
+            btnDiv.Text = "÷";
+            btnDiv.UseVisualStyleBackColor = true;
+            btnDiv.Click += btnDiv_Click;
             // 
             // SimpleCalculator
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(buttondiv);
-            Controls.Add(buttonmul);
-            Controls.Add(buttonsub);
-            Controls.Add(ProgressLabel);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(Answer);
-            Controls.Add(AnswerBar);
+            Controls.Add(btnDiv);
+            Controls.Add(btnMul);
+            Controls.Add(btnSub);
+            Controls.Add(lblOpCount);
+            Controls.Add(lblStatus);
+            Controls.Add(nudResult);
             Controls.Add(buttonequals);
-            Controls.Add(buttonadd);
-            Controls.Add(InputKey2);
-            Controls.Add(InputKey1);
+            Controls.Add(btnAdd);
+            Controls.Add(txtInput2);
+            Controls.Add(txtInput1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "SimpleCalculator";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Simple Calculator";
-            Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)Answer).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudResult).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox InputKey1;
-        private TextBox InputKey2;
-        private Button buttonadd;
+        private TextBox txtInput1;
+        private TextBox txtInput2;
+        private Button btnAdd;
         private Button buttonequals;
-        private ProgressBar AnswerBar;
-        private NumericUpDown Answer;
-        private Label label1;
-        private Label label2;
-        private Label ProgressLabel;
-        private Button buttonsub;
-        private Button buttonmul;
-        private Button buttondiv;
+        private NumericUpDown nudResult;
+        private Label lblStatus;
+        private Label lblOpCount;
+        private Button btnSub;
+        private Button btnMul;
+        private Button btnDiv;
     }
 }

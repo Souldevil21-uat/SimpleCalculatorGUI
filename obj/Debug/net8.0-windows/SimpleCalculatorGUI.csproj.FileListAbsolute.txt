@@ -1,0 +1,17 @@
+D:\GitHib Repositories\SimpleCalculatorGUI\SimpleCalculatorGUI\obj\Debug\net8.0-windows\SimpleCalculatorGUI.SimpleCalculator.resources
+D:\GitHib Repositories\SimpleCalculatorGUI\SimpleCalculatorGUI\obj\Debug\net8.0-windows\SimpleCalculatorGUI.csproj.GenerateResource.cache
+D:\GitHib Repositories\SimpleCalculatorGUI\SimpleCalculatorGUI\obj\Debug\net8.0-windows\SimpleCalculatorGUI.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHib Repositories\SimpleCalculatorGUI\SimpleCalculatorGUI\obj\Debug\net8.0-windows\SimpleCalculatorGUI.AssemblyInfoInputs.cache
+D:\GitHib Repositories\SimpleCalculatorGUI\SimpleCalculatorGUI\obj\Debug\net8.0-windows\SimpleCalculatorGUI.AssemblyInfo.cs
+D:\GitHib Repositories\SimpleCalculatorGUI\SimpleCalculatorGUI\obj\Debug\net8.0-windows\SimpleCalculatorGUI.csproj.CoreCompileInputs.cache
+D:\GitHib Repositories\SimpleCalculatorGUI\SimpleCalculatorGUI\obj\Debug\net8.0-windows\SimpleCalculatorGUI.sourcelink.json
+D:\GitHib Repositories\SimpleCalculatorGUI\SimpleCalculatorGUI\bin\Debug\net8.0-windows\SimpleCalculatorGUI.exe
+D:\GitHib Repositories\SimpleCalculatorGUI\SimpleCalculatorGUI\bin\Debug\net8.0-windows\SimpleCalculatorGUI.deps.json
+D:\GitHib Repositories\SimpleCalculatorGUI\SimpleCalculatorGUI\bin\Debug\net8.0-windows\SimpleCalculatorGUI.runtimeconfig.json
+D:\GitHib Repositories\SimpleCalculatorGUI\SimpleCalculatorGUI\bin\Debug\net8.0-windows\SimpleCalculatorGUI.dll
+D:\GitHib Repositories\SimpleCalculatorGUI\SimpleCalculatorGUI\bin\Debug\net8.0-windows\SimpleCalculatorGUI.pdb
+D:\GitHib Repositories\SimpleCalculatorGUI\SimpleCalculatorGUI\obj\Debug\net8.0-windows\SimpleCalculatorGUI.dll
+D:\GitHib Repositories\SimpleCalculatorGUI\SimpleCalculatorGUI\obj\Debug\net8.0-windows\refint\SimpleCalculatorGUI.dll
+D:\GitHib Repositories\SimpleCalculatorGUI\SimpleCalculatorGUI\obj\Debug\net8.0-windows\SimpleCalculatorGUI.pdb
+D:\GitHib Repositories\SimpleCalculatorGUI\SimpleCalculatorGUI\obj\Debug\net8.0-windows\SimpleCalculatorGUI.genruntimeconfig.cache
+D:\GitHib Repositories\SimpleCalculatorGUI\SimpleCalculatorGUI\obj\Debug\net8.0-windows\ref\SimpleCalculatorGUI.dll
