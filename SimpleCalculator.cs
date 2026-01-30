@@ -10,7 +10,6 @@ namespace SimpleCalculatorGUI
         private double secondNumber;
         private double result;
 
-        // Requirement: variables of different types.
         // This int tracks how many operations have been performed (helps UX and meets the “display a variable” requirement).
         private int operationCount;
 
@@ -22,7 +21,6 @@ namespace SimpleCalculatorGUI
             // This loads the UI that you designed in the Windows Forms Designer.
             InitializeComponent();
 
-            // Requirement: customized form (does not count as a GUI component).
             this.Text = "Simple Calculator";
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -43,14 +41,12 @@ namespace SimpleCalculatorGUI
         }
 
         // This method reads the textbox values and validates they are numbers.
-        // Requirement: conditional statements (if/else set #1) to ensure only numbers are entered.
         private bool TryReadInputs()
         {
             // TryParse attempts to convert text to a number safely without crashing.
             bool input1Valid = double.TryParse(txtInput1.Text, out firstNumber);
             bool input2Valid = double.TryParse(txtInput2.Text, out secondNumber);
 
-            // If Input 1 is not valid, we stop the calculation and guide the user.
             if (input1Valid == false)
             {
                 MessageBox.Show("Input 1 must be a valid number. Example: 12 or 12.5");
@@ -61,10 +57,9 @@ namespace SimpleCalculatorGUI
             }
             else
             {
-                // Input 1 is valid, so we continue to validate Input 2.
+                // Input 1 is valid, so continue.
             }
 
-            // If Input 2 is not valid, we stop the calculation and guide the user.
             if (input2Valid == false)
             {
                 MessageBox.Show("Input 2 must be a valid number. Example: 7 or 7.25");
@@ -84,7 +79,6 @@ namespace SimpleCalculatorGUI
         }
 
         // This method displays the result on the form using the NumericUpDown.
-        // Requirement: display at least one variable’s value on the form (result is displayed here).
         private void DisplayResult(double value)
         {
             // NumericUpDown uses decimal internally, so we convert the double to decimal.
@@ -101,15 +95,13 @@ namespace SimpleCalculatorGUI
             }
             else
             {
-                // Value is already in range, so no changes are needed.
+                // Value is already in range.
             }
 
-            // Display the final value in the NumericUpDown control.
             nudResult.Value = decValue;
         }
 
         // This method updates the UI to give the user feedback after each operation.
-        // Requirement: display variable values on the form (operationCount and lastOperation are shown here).
         private void UpdateUiAfterOperation(string operationSymbol)
         {
             // Increase the operation count each time the user completes an operation.
@@ -125,13 +117,47 @@ namespace SimpleCalculatorGUI
             lblStatus.Text = $"Status: Completed {lastOperation}. Result updated below.";
         }
 
+
+        // Adds two numbers and returns the sum.
+        private double AddNumbers(double numberA, double numberB)
+        {
+            return numberA + numberB;
+        }
+
+        // Subtracts numberB from numberA and returns the difference.
+        private double SubtractNumbers(double numberA, double numberB)
+        {
+            return numberA - numberB;
+        }
+
+        // Multiplies two numbers and returns the product.
+        private double MultiplyNumbers(double numberA, double numberB)
+        {
+            return numberA * numberB;
+        }
+
+        // Divides numberA by numberB and returns the quotient.
+        private double DivideNumbers(double numberA, double numberB)
+        {
+            if (numberB == 0)
+            {
+                // We return NaN (Not a Number) to signal an invalid division attempt.
+                // The button click checks for NaN and shows a message instead of crashing.
+                return double.NaN;
+            }
+            else
+            {
+                return numberA / numberB;
+            }
+        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             // Validate inputs first; if invalid, stop immediately.
             if (TryReadInputs() == false) return;
 
-            // Perform addition (0 is allowed).
-            result = firstNumber + secondNumber;
+            // Use the Week 4 custom function instead of doing math directly here.
+            result = AddNumbers(firstNumber, secondNumber);
 
             // Display the result.
             DisplayResult(result);
@@ -145,8 +171,8 @@ namespace SimpleCalculatorGUI
             // Validate inputs first; if invalid, stop immediately.
             if (TryReadInputs() == false) return;
 
-            // Perform subtraction (0 is allowed).
-            result = firstNumber - secondNumber;
+            // Use the Week 4 custom function instead of doing math directly here.
+            result = SubtractNumbers(firstNumber, secondNumber);
 
             // Display the result.
             DisplayResult(result);
@@ -160,8 +186,8 @@ namespace SimpleCalculatorGUI
             // Validate inputs first; if invalid, stop immediately.
             if (TryReadInputs() == false) return;
 
-            // Perform multiplication (0 is allowed).
-            result = firstNumber * secondNumber;
+            // Use the Week 4 custom function instead of doing math directly here.
+            result = MultiplyNumbers(firstNumber, secondNumber);
 
             // Display the result.
             DisplayResult(result);
@@ -175,9 +201,11 @@ namespace SimpleCalculatorGUI
             // Validate inputs first; if invalid, stop immediately.
             if (TryReadInputs() == false) return;
 
-            // Requirement: conditional statements (if/else set #2) to prevent division by 0.
-            // Note: user is allowed to add/subtract/multiply by 0, but division by 0 is blocked.
-            if (secondNumber == 0)
+            // Use the Week 4 custom function for division.
+            result = DivideNumbers(firstNumber, secondNumber);
+
+            // If the result is NaN, the user attempted division by 0.
+            if (double.IsNaN(result))
             {
                 MessageBox.Show("You cannot divide by 0. Please enter a non-zero number for Input 2.");
                 txtInput2.Focus();
@@ -188,18 +216,14 @@ namespace SimpleCalculatorGUI
             else
             {
                 // If we are here, dividing is safe.
-                result = firstNumber / secondNumber;
-
-                // Display the result.
                 DisplayResult(result);
 
                 // Update feedback UI.
                 UpdateUiAfterOperation("÷");
-
-                //Used ChatGPT to help format the code properly and troubleshoot issues.
             }
         }
     }
 }
+
 
 
